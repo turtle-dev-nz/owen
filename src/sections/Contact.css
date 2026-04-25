@@ -104,3 +104,17 @@
   justify-content: flex-end;
   margin-top: var(--space-2);
 }
+
+@media (max-width: 640px) {
+  .contact-form__details {
+    flex-direction: column;
+  }
+
+  .contact__options {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    min-width: unset;
+  }
+}
