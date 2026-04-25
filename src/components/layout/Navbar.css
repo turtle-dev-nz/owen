@@ -1,0 +1,106 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem 0;
+  transition:
+    background var(--transition-base),
+    box-shadow var(--transition-base),
+    padding var(--transition-base);
+}
+
+.navbar--scrolled {
+  background: rgba(8, 8, 15, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--color-border);
+  padding: 0.875rem 0;
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: baseline;
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navbar__logo-dot {
+  color: var(--color-accent);
+  font-size: 1.5em;
+  line-height: 0;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__link {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-md);
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--color-text);
+  background: var(--color-surface-2);
+}
+
+.navbar__link--active {
+  color: var(--color-accent-light);
+}
+
+.navbar__end {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.navbar__cta {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-accent-light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.navbar__cta:hover {
+  background: var(--color-accent-glow);
+  border-color: var(--color-accent-light);
+}
+
+@media (max-width: 640px) {
+  .navbar__nav {
+    display: none;
+  }
+}
