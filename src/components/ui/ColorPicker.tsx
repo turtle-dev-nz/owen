@@ -55,23 +55,19 @@ export function ColorPicker({ direction = "right" }: { direction?: "left" | "rig
         aria-label={open ? "Close color picker" : "Choose accent color"}
         aria-expanded={open}
       >
-        <svg
-          className="color-wheel"
-          width="22"
-          height="22"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <svg className="color-wheel" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
           {ACCENT_PALETTES.map((palette, i) => (
             <path
               key={palette.id}
               d={pieSlicePath(i)}
               fill={palette.swatch}
               className="color-wheel__segment"
-              style={{
-                "--seg-delay": `${(expandLeft ? TOTAL - 1 - i : i) * 52}ms`,
-                "--seg-close-delay": `${(expandLeft ? i : TOTAL - 1 - i) * 52}ms`,
-              } as SegmentStyle}
+              style={
+                {
+                  "--seg-delay": `${(expandLeft ? TOTAL - 1 - i : i) * 52}ms`,
+                  "--seg-close-delay": `${(expandLeft ? i : TOTAL - 1 - i) * 52}ms`,
+                } as SegmentStyle
+              }
             />
           ))}
           <circle cx={CX} cy={CY} r={R_OUTER} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={0.5} />
