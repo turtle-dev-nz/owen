@@ -54,7 +54,7 @@ export function Navbar() {
         </nav>
 
         <div className="navbar__end">
-          <ColorPicker />
+          <ColorPicker direction="left" />
           <a href="mailto:hello@owen.dev" className="navbar__cta">
             Let&apos;s talk
           </a>
