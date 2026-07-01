@@ -55,10 +55,6 @@ ul {
   padding: var(--section-padding);
 }
 
-section[id] {
-  scroll-margin-top: 80px;
-}
-
 @media (max-width: 768px) {
   :root {
     --section-padding: 4rem 0;
