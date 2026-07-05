@@ -12,7 +12,7 @@
 }
 
 .navbar--scrolled {
-  background: rgba(8, 8, 15, 0.85);
+  background: var(--color-navbar-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 0 var(--color-border);
@@ -216,7 +216,7 @@
   position: fixed;
   inset: 0;
   z-index: 99;
-  background: rgba(0, 0, 0, 0.55);
+  background: var(--color-overlay);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   animation: backdrop-in 200ms ease forwards;
@@ -234,7 +234,7 @@
 /* ---- Solid bg when mobile menu is open ---- */
 
 .navbar--menu-open {
-  background: rgba(8, 8, 15, 0.97);
+  background: var(--color-navbar-open-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }

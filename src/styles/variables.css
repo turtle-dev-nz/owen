@@ -13,6 +13,10 @@
   --color-text-muted: #475569;
   --color-green: #10b981;
   --color-danger: #ef4444;
+  --color-picker-wheel-ring: rgba(255, 255, 255, 0.08);
+  --color-navbar-bg: rgba(8, 8, 15, 0.85);
+  --color-navbar-open-bg: rgba(8, 8, 15, 0.97);
+  --color-overlay: rgba(0, 0, 0, 0.55);
   --opacity-disabled: 0.45;
 
   /* Typography */
@@ -75,4 +79,21 @@
 
   /* AnimationStyle */
   --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+:root[data-theme="light"] {
+  --color-bg: #f6f7fb;
+  --color-surface: #ffffff;
+  --color-surface-2: #eef1f8;
+  --color-border: #d7ddeb;
+  --color-text: #111827;
+  --color-text-secondary: #4b5563;
+  --color-text-muted: #9ca3af;
+  --color-picker-wheel-ring: rgba(15, 23, 42, 0.15);
+  --color-navbar-bg: rgba(246, 247, 251, 0.9);
+  --color-navbar-open-bg: rgba(246, 247, 251, 0.98);
+  --color-overlay: rgba(17, 24, 39, 0.2);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 8px 18px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 12px 36px rgba(15, 23, 42, 0.16);
 }

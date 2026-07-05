@@ -1,14 +1,22 @@
 import { Button } from "../components/ui/Button";
 import cvFile from "../assets/Owen_Nicholson_CV.pdf";
+import { useScrollPosition } from "../hooks/useScrollPosition";
 import "./Hero.css";
 
-export function Hero() {
+interface HeroProps {
+  isMobile?: boolean;
+}
+
+export function Hero({ isMobile = false }: HeroProps) {
+  const scrollY = useScrollPosition();
+  const isCondensed = !isMobile && scrollY > 0;
+
   const scrollTo = (id: string): void => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="hero" aria-label="Introduction">
+    <section className={isCondensed ? "hero hero--condensed" : "hero"} aria-label="Introduction">
       <div className="hero__bg" aria-hidden="true">
         <div className="hero__glow" />
       </div>
@@ -51,14 +59,16 @@ export function Hero() {
         </div>
       </div>
 
-      <button
-        type="button"
-        className="hero__scroll-indicator"
-        onClick={() => scrollTo("about")}
-        aria-label="Scroll to About section"
-      >
-        <span className="hero__scroll-line" aria-hidden="true" />
-      </button>
+      {!isMobile && !isCondensed && (
+        <button
+          type="button"
+          className="hero__scroll-indicator"
+          onClick={() => scrollTo("about")}
+          aria-label="Scroll to About section"
+        >
+          <span className="hero__scroll-line" aria-hidden="true" />
+        </button>
+      )}
     </section>
   );
 }
