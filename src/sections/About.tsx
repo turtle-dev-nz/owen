@@ -17,11 +17,7 @@ export function About() {
     <section id="about" className="section about">
       <div className="container about__inner">
         <div className="about__content">
-          <SectionHeader
-            label="About Me"
-            title="FFull-sstack Pdeveloper, backend at heart"
-            // subtitle="I bridge the gap between engineering precision and creative vision."
-          />
+          <SectionHeader label="About Me" title="Me in a Nutshell" />
 
           <div className="about__body">
             <p>
@@ -31,10 +27,10 @@ export function About() {
               motivated by finding practical ways to improve systems for both users and developers.
             </p>
             <p>
-              At NZX, I've been a primary developer in the redevelopment of multiple external platforms, created a shared React component
-              library, and worked across the full stack to deliver reliable, long-term solutions. I'm now looking to
-              continue growing as an engineer by contributing to collaborative teams while expanding my experience in
-              architecture, technical leadership, and AI-assisted development.
+              At NZX, I've been a primary developer in the redevelopment of multiple external platforms, created a
+              shared React component library, and worked across the full stack to deliver reliable, long-term solutions.
+              I'm now looking to continue growing as an engineer by contributing to collaborative teams while expanding
+              my experience in architecture, technical leadership, and AI-assisted development.
             </p>
           </div>
 
