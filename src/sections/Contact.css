@@ -76,6 +76,9 @@
   width: 100%;
   box-sizing: border-box;
   position: relative;
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base);
 
   &:hover {
     --opacity: 1;

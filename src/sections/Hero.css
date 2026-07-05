@@ -53,6 +53,9 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   background: var(--color-surface);
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base);
 }
 
 .hero__status-dot {
@@ -87,7 +90,7 @@
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1;
-  background: linear-gradient(135deg, #f1f5f9 0%, #94a3b8 100%);
+  background-color: var(--color-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

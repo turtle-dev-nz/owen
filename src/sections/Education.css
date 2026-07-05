@@ -12,7 +12,9 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  transition: border-color var(--transition-base);
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base);
 }
 
 .education-card:hover {

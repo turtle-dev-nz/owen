@@ -26,6 +26,9 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   margin-top: 2rem;
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base);
 }
 
 .about__stat {
@@ -37,6 +40,7 @@
   padding: var(--space-8);
   background: var(--color-surface);
   text-align: center;
+  transition: background var(--transition-base);
 }
 
 .about__stat-value {

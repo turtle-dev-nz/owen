@@ -14,6 +14,7 @@
   justify-content: space-between;
   gap: var(--space-8);
   transition:
+    background var(--transition-base),
     border-color var(--transition-base),
     transform var(--transition-slow);
 }

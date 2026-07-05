@@ -9,4 +9,7 @@
   color: var(--color-accent-light);
   border: 1px solid rgba(99, 102, 241, 0.2);
   white-space: nowrap;
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base);
 }

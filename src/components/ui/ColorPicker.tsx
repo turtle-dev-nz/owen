@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from "react";
+import { useState, type CSSProperties, type MouseEvent, type PointerEvent } from "react";
 import { useAccentColor, ACCENT_PALETTES } from "../../hooks/useAccentColor";
 import { useThemeMode } from "../../hooks/useThemeMode";
 import "./ColorPicker.css";
@@ -48,6 +48,43 @@ export function ColorPicker({ direction = "right" }: { direction?: "left" | "rig
   const [open, setOpen] = useState(false);
   const expandLeft = direction === "left";
   const isLightMode = mode === "light";
+
+  const logThemePicker = (
+    stage: string,
+    event?: MouseEvent<HTMLButtonElement> | PointerEvent<HTMLButtonElement>,
+  ): void => {
+    if (window.localStorage.getItem("theme-debug") !== "1") {
+      return;
+    }
+
+    const target = event?.currentTarget;
+    const rect = target?.getBoundingClientRect();
+    const styles = target ? window.getComputedStyle(target) : null;
+
+    console.log(`[theme-picker] ${new Date().toISOString()} ${stage}`, {
+      mode,
+      open,
+      direction,
+      scrollY: window.scrollY,
+      dataThemeAttr: document.documentElement.getAttribute("data-theme"),
+      pointerEvents: styles?.pointerEvents,
+      visibility: styles?.visibility,
+      opacity: styles?.opacity,
+      rect,
+    });
+  };
+
+  const onThemePointerDown = (event: PointerEvent<HTMLButtonElement>): void => {
+    logThemePicker("pointerdown", event);
+  };
+
+  const onThemeClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    logThemePicker("click:before-toggle", event);
+    toggleThemeMode();
+    window.requestAnimationFrame(() => {
+      logThemePicker("click:after-toggle");
+    });
+  };
 
   return (
     <div
@@ -105,7 +142,8 @@ export function ColorPicker({ direction = "right" }: { direction?: "left" | "rig
       <button
         type="button"
         className={`color-picker__theme-pill${open ? " color-picker__theme-pill--open" : ""}`}
-        onClick={toggleThemeMode}
+        onPointerDown={onThemePointerDown}
+        onClick={onThemeClick}
         aria-label={isLightMode ? "Switch to dark mode" : "Switch to light mode"}
         aria-pressed={isLightMode}
       >
