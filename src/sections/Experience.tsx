@@ -66,7 +66,7 @@ export function Experience() {
         <SectionHeader
           label="Career"
           title="Work experience"
-          subtitle="A track record across software development and high-pressure operations."
+          // subtitle="A track record across my software development and high-pressure operations."
         />
 
         <div className="experience__timeline">

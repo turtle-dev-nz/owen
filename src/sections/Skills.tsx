@@ -9,36 +9,6 @@ interface SkillCategory {
   skills: string[];
 }
 
-// const SKILL_CATEGORIES: SkillCategory[] = [
-//   {
-//     name: "Frontend",
-//     icon: "◈",
-//     about:
-//       "Building component-driven interfaces with a focus on design fidelity, performance, and reusable architecture.",
-//     skills: ["React", "TypeScript", "Next.js", "Vite", "CSS"],
-//   },
-//   {
-//     name: "Data & Backend",
-//     icon: "⬡",
-//     about:
-//       "Working across the stack on data-heavy platforms — live market feeds, financial tables, and charting pipelines.",
-//     skills: ["Node.js", "Express", "PostgreSQL", "OracleSQL", "Ruby on Rails", "Data Visualisation"],
-//   },
-//   {
-//     name: "Design Systems",
-//     icon: "◎",
-//     about:
-//       "Designing and maintaining component libraries that scale consistently across multiple production applications.",
-//     skills: ["Component Libraries", "CSS Architecture", "Design Tokens", "Accessibility", "Figma"],
-//   },
-//   {
-//     name: "Tooling",
-//     icon: "◷",
-//     about: "Keeping development environments reproducible and CI pipelines tight from day one.",
-//     skills: ["Docker / Podman", "GitHub Actions", "Dev Containers", "Git"],
-//   },
-// ];
-
 const SKILL_CATEGORIES: SkillCategory[] = [
   {
     name: "Frontend Engineering",
@@ -76,8 +46,7 @@ export function Skills() {
       <div className="container">
         <SectionHeader
           label="Capabilities"
-          title="What I work with"
-          subtitle="A curated set of tools and technologies I use to build end-to-end."
+          title="My Professional Toolkit"
         />
 
         <div className="skills__grid">
