@@ -38,13 +38,23 @@ const CONTACT_OPTIONS: ContactOption[] = [
 ];
 
 export function Contact() {
+  const onHandleMouseMove = (e: React.MouseEvent<HTMLFormElement, MouseEvent>) => {
+    const { currentTarget: target } = e;
+    const rect = target.getBoundingClientRect(),
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
+
+    target.style.setProperty("--mouse-x", `${x}px`);
+    target.style.setProperty("--mouse-y", `${y}px`);
+  };
+
   return (
     <section id="contact" className="section contact">
       <div className="container">
         <SectionHeader
           label="Contact"
           title="Let's work together"
-          subtitle="Open to freelance projects, collaborations, and full-time opportunities."
+          subtitle="Currently employed and open to new full-time opportunities — feel free to reach out."
         />
 
         <div className="contact__options">
@@ -66,7 +76,12 @@ export function Contact() {
           ))}
         </div>
         <div className="contact-form__area">
-          <form id="contact-form" className="contact__form" onSubmit={(e) => e.preventDefault()}>
+          <form
+            id="contact-form"
+            className="contact__form"
+            onSubmit={(e) => e.preventDefault()}
+            onMouseMove={onHandleMouseMove}
+          >
             <div className="contact-form__header">
               <h3 className="contact-form__title">Send a message</h3>
               <p className="contact-form__subtitle">I'll get back to you as soon as possible.</p>

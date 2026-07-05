@@ -15,11 +15,11 @@ export function Hero() {
       <div className="container hero__content">
         <div className="hero__eyebrow">
           <span className="hero__status-dot" aria-hidden="true" />
-          <span>Available for new projects</span>
+          <span>Open to new opportunities</span>
         </div>
 
         <h1 className="hero__title">
-          <span className="hero__title-name">Owen</span>
+          <span className="hero__title-name">Owen Nicholson</span>
           <span className="hero__title-line">Full-Stack Developer</span>
           <span className="hero__title-line hero__title-line--accent">&amp; UI/UX Designer</span>
         </h1>
@@ -34,9 +34,16 @@ export function Hero() {
           <Button variant="outline" onClick={() => scrollTo("contact")}>
             Get In Touch
           </Button>
+          <Button variant="outline" disabled title="CV download coming soon">
+            Download CV
+          </Button>
         </div>
 
         <div className="hero__meta" aria-label="Primary technologies">
+          <span className="hero__meta-item">Wellington, NZ</span>
+          <span className="hero__meta-sep" aria-hidden="true">
+            ·
+          </span>
           <span className="hero__meta-item">React</span>
           <span className="hero__meta-sep" aria-hidden="true">
             ·
@@ -45,11 +52,11 @@ export function Hero() {
           <span className="hero__meta-sep" aria-hidden="true">
             ·
           </span>
-          <span className="hero__meta-item">Figma</span>
+          <span className="hero__meta-item">TypeScript</span>
           <span className="hero__meta-sep" aria-hidden="true">
             ·
           </span>
-          <span className="hero__meta-item">TypeScript</span>
+          <span className="hero__meta-item">Figma</span>
         </div>
       </div>
 
