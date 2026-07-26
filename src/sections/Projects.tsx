@@ -18,7 +18,7 @@ const PROJECTS: Project[] = [
     label: "Creative Studio",
     title: "People with Ideas",
     description:
-      "A marketing and portfolio site for a New Zealand creative agency specialising in video production, brand strategy, and content creation. Built a fast, editorial site with project showcases, a services section, and a contact flow — designed to let the work speak for itself.",
+      "A marketing and portfolio site for a New Zealand creative agency specialising in video production, brand strategy, and content creation. Built a fast, editorial site with project showcases, a services section, and a contact flow - designed to let the work speak for itself.",
     tags: ["React", "TypeScript", "Vite", "CSS"],
     liveUrl: "https://peoplewithideas.co.nz/",
   },
@@ -27,7 +27,7 @@ const PROJECTS: Project[] = [
     label: "Enterprise",
     title: "NZX Electricity Platforms",
     description:
-      "Rebuilt three production platforms for NZX's electricity market division — Wits, Clearing, and Recon. Each is data-heavy, surfacing live market information through complex tables and interactive charts. To deliver a consistent UI across all three, I designed and built a bespoke component library from scratch.",
+      "Rebuilt three production platforms for NZX's electricity market division - Wits, Clearing, and Recon. Each is data-heavy, surfacing live market information through complex tables and interactive charts. To deliver a consistent UI across all three, I designed and built a bespoke component library from scratch.",
     tags: ["React", "TypeScript", "Data Viz", "Component Library"],
   },
   {

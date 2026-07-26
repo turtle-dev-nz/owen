@@ -133,7 +133,7 @@ export function Contact() {
         <SectionHeader
           label="Contact"
           title="Let's work together"
-          subtitle="Currently employed and open to new full-time opportunities — feel free to reach out."
+          subtitle="Currently employed and open to new full-time opportunities - feel free to reach out."
         />
 
         <div className="contact__options">

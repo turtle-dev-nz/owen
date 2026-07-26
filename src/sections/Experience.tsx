@@ -39,7 +39,7 @@ const ROLES: Role[] = [
     achievements: [
       "Contributed to enterprise wealth management platforms within a cross-functional team of around 15 developers and testers.",
       "Worked with an international team of developers in Europe, collaborating on backend systems.",
-      "Focused primarily on backend development — building and maintaining financial data pipelines and investment processing services.",
+      "Focused primarily on backend development - building and maintaining financial data pipelines and investment processing services.",
     ],
     tags: ["C#", "Visual Basic", "PostgreSQL"],
   },

@@ -14,7 +14,7 @@ const QUALIFICATIONS: Qualification[] = [
   {
     id: 1,
     type: "degree",
-    title: "Bachelor of Science — Computer Science",
+    title: "Bachelor of Science - Computer Science",
     institution: "Victoria University of Wellington",
     year: "Graduated 2022",
   },

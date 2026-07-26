@@ -35,7 +35,7 @@ const SKILL_CATEGORIES: SkillCategory[] = [
     name: "Engineering Practices",
     icon: "◷",
     about:
-      "Comfortable working across the software lifecycle—from source control and containerised development to automated deployments and continuous improvement.",
+      "Comfortable working across the software lifecycle-from source control and containerised development to automated deployments and continuous improvement.",
     skills: ["Git", "Docker", "Podman", "GitHub Actions", "Dev Containers"],
   },
 ];
@@ -44,10 +44,7 @@ export function Skills() {
   return (
     <section id="skills" className="section skills">
       <div className="container">
-        <SectionHeader
-          label="Capabilities"
-          title="My Professional Toolkit"
-        />
+        <SectionHeader label="Capabilities" title="My Professional Toolkit" />
 
         <div className="skills__grid">
           {SKILL_CATEGORIES.map(({ name, icon, about, skills }) => (
