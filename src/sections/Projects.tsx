@@ -30,14 +30,6 @@ const PROJECTS: Project[] = [
       "Rebuilt three production platforms for NZX's electricity market division - Wits, Clearing, and Recon. Each is data-heavy, surfacing live market information through complex tables and interactive charts. To deliver a consistent UI across all three, I designed and built a bespoke component library from scratch.",
     tags: ["React", "TypeScript", "Data Viz", "Component Library"],
   },
-  {
-    id: 3,
-    label: "Design System",
-    title: "Turtle UI",
-    description:
-      "A component library forked and evolved from the internal tooling built for NZX. Turtle UI is a growing design system with CSS custom property theming, accessible form controls, a notched-field pattern, and data-focused components built for real enterprise use.",
-    tags: ["React", "TypeScript", "CSS", "Design System"],
-  },
 ];
 
 export function Projects() {
