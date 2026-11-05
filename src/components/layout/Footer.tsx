@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <p className="footer__text">
-          Built with React &amp; Vite &mdash; Owen &copy; {new Date().getFullYear()}
+          Built with React &amp; Vite &mdash; Owen Nicholson &copy; {new Date().getFullYear()}
         </p>
         <div className="footer__links">
           <a href="https://github.com/turtle-dev-nz" target="_blank" rel="noreferrer" className="footer__link">

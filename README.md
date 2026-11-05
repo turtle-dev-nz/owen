@@ -1,16 +1,32 @@
-# React + Vite
+# owennicholson.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal site for Owen Nicholson — React, TypeScript and Vite, hosted on GitHub Pages.
 
-Currently, two official plugins are available:
+## Develop
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Check
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+```
 
-## Expanding the ESLint configuration
+## Deploy
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Deploys are manual. Merging to `main` does not update the live site.
+
+```bash
+npm run deploy   # builds, then publishes dist/ to the gh-pages branch
+```
+
+## Notes
+
+- The link-preview image is `public/og-image.png` (1200×630). Update it if the name or headline changes.
+- The Projects section is written but currently hidden; re-enable it in `src/pages/Home.tsx` and the nav links in `src/components/layout/Navbar.tsx`.
+- Theme debug logging can be switched on in the browser with `localStorage.setItem("theme-debug", "1")`.

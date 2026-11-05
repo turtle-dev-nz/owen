@@ -71,7 +71,7 @@ export function Navbar() {
 
           <div className="navbar__end">
             <ColorPicker direction="left" />
-            <a href="mailto:hello@owen.dev" className="navbar__cta">
+            <a href="mailto:hello@owennicholson.com" className="navbar__cta">
               Let&apos;s talk
             </a>
             <button
@@ -104,7 +104,7 @@ export function Navbar() {
           </ul>
           <div className="navbar__mobile-cta-wrap">
             <div className="navbar__mobile-bottom">
-              <a href="mailto:hello@owen.dev" className="navbar__cta" onClick={() => setMenuOpen(false)}>
+              <a href="mailto:hello@owennicholson.com" className="navbar__cta" onClick={() => setMenuOpen(false)}>
                 Let&apos;s talk
               </a>
               <ColorPicker direction="right" />
